@@ -62,7 +62,6 @@ function App() {
   const handleSetNote = (id: string, index: number) => {
     setSelectedNote({ id, index });
     setEnableNoteCreation(false);
-    console.log(selectedNote);
   };
 
   const handleSetTags = (id: string) => {
@@ -130,9 +129,6 @@ function App() {
 
     setTagList((_preval: Tag[]) => [...tagList, ...getNewTags]);
 
-    // console.log(tagList);
-    console.log("New Tags: ", getNewTags);
-
     return tagCheck;
   };
 
@@ -176,7 +172,6 @@ function App() {
 
     setNotes((_preval: NoteModel[]) =>
       _preval.map((note) => {
-        console.log(note.id, selectedNote.id);
         return note.id == selectedNote.id
           ? { ...note, title, tags: getTags, content, date: Date.now() }
           : note;
@@ -222,7 +217,6 @@ function App() {
   const handleArchivedNote = () => {
     setNotes((_preval: NoteModel[]) =>
       _preval.map((note) => {
-        console.log(note.id, selectedNote.id);
         return note.id == selectedNote.id
           ? { ...note, archived: !note.archived }
           : note;
