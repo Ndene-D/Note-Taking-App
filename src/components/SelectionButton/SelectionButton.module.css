@@ -1,0 +1,60 @@
+.selectionButton {
+  /* Display */
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1.5em;
+  margin-bottom: 0.625em;
+
+  /* Border */
+  border: 1px solid;
+  border-color: var(--border-color);
+  border-radius: 0.5em;
+}
+
+.selectionButton .icon {
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  border-color: var(--border-color);
+  padding: 0.625rem;
+  border-radius: 0.5em;
+  width: fit-content;
+  height: fit-content;
+
+  margin-right: 1em;
+}
+
+.selectionButton span {
+  font-size: small;
+  color: var(--span-alt-color);
+}
+
+.selectionButton .circle {
+  /* Display */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+
+  /* Border */
+  border: 0.09375em solid;
+  border-color: #3d3d3d;
+  border-radius: 100%;
+  margin-left: auto;
+}
+
+.active:not(.selectionButton.active) {
+  width: 90%;
+  height: 90%;
+  margin-left: unset;
+  background-color: #3d3d3d;
+  border-radius: 100%;
+}
+
+@media (max-width: 1024px) {
+  .selectionButton.active {
+    border-color: var(--primary-button-background);
+  }
+}

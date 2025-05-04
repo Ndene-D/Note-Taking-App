@@ -1,0 +1,36 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 23.4375em;
+  height: max-content;
+  margin-right: 0.625em;
+}
+
+.search-bar input {
+  background-color: unset;
+  border: 0.125em solid var(--border-color);
+  padding: 0.875em 2.625em 0.875em 2.625em;
+  flex: 1;
+  border-radius: 0.5em;
+  color: var(--text-color);
+}
+
+.search-bar img {
+  position: absolute;
+  width: 1.25em;
+  height: 1.25em;
+  left: 0.625em;
+}
+
+.search-bar button {
+  position: absolute;
+  width: 28px;
+  height: 2em;
+  right: 0.625em;
+  font-size: small;
+}
+
+.search-bar.mobile {
+  width: 100%;
+}

@@ -1,0 +1,99 @@
+.button {
+  /* Display */
+  width: 100%;
+  height: 3.125em;
+  background-color: var(--primary-button-background);
+  color: var(--button-text-color);
+  flex-shrink: 0;
+
+  /* Border */
+
+  border: unset;
+  border-radius: 0.5em;
+
+  /* Font */
+}
+
+.button:hover {
+  background-color: var(--button-hover);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.buttonAlt {
+  background-color: unset;
+  border: 0.03125em solid;
+  border-color: var(--border);
+}
+
+.light.buttonAlt {
+  color: var(--text-color);
+}
+
+.buttonAlt:hover {
+  background-color: var(--hover);
+}
+
+.buttonSmall {
+  height: 2.625em;
+}
+
+.button.secondary {
+  color: var(--light-gray);
+  background-color: var(--secondary-button-background);
+}
+
+.button.secondary.light {
+  color: var(--text-color);
+}
+
+.button.secondary:hover {
+  background-color: var(--secondary-button-hover);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+  gap: 0.5em;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+.icon {
+  padding: 0 0.375em;
+  margin: 0 !important;
+}
+
+.icon img {
+  width: calc(100% / 1.2);
+  height: calc(100% / 1.2);
+  margin: 0 !important;
+}
+
+.transparent {
+  background-color: unset;
+}
+
+.transparent:hover {
+  background-color: unset;
+  text-decoration: underline;
+}
+
+.transparent.light {
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .icon {
+    margin: 0 !important;
+  }
+
+  .icon img {
+    margin: 0 !important;
+  }
+}

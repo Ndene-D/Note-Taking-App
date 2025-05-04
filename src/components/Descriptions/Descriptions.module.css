@@ -1,0 +1,15 @@
+.descriptions {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.625em;
+}
+
+.descriptions span {
+  font-size: small;
+}
+
+.descriptions img {
+  width: 1.125em;
+  height: 1.125em;
+}

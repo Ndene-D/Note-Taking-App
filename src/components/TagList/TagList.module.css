@@ -1,0 +1,23 @@
+.tags ul {
+  overflow-y: scroll;
+}
+
+.tags li {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5em;
+  overflow-y: scroll;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.tags li.active {
+  background-color: var(--selected-item);
+}
+
+.tags .mobile {
+  gap: 0.875em;
+  font-size: large;
+}

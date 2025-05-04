@@ -1,0 +1,37 @@
+.noteCard {
+  /* Display */
+  width: 100%;
+  padding: 0.625em 1em 0.625em 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.625em;
+  border-radius: 0.5em;
+  margin-bottom: 0.375em;
+}
+
+.noteCard:hover {
+  background-color: var(--hover);
+}
+
+.noteCard div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.noteCard span {
+  padding: 0 0.375em;
+  background-color: var(--span-color);
+  border-radius: 0.25em;
+  font-weight: 400;
+  font-size: small;
+}
+
+.noteCard p {
+  font-size: small;
+}
+
+.noteCard.active {
+  background-color: var(--selected-item);
+}
