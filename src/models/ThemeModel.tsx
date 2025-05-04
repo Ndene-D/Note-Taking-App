@@ -7,6 +7,7 @@ export interface IconList {
   font: string;
   home: string;
   notes: string;
+  plus: string;
   rightArrow: string;
   search: string;
   settings: string;

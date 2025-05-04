@@ -230,7 +230,11 @@ Layout.Container = ({
   return (
     <>
       {(selected || noteCreation) && (
-        <main className={styles.notesContainer}>
+        <main
+          className={`${styles.notesContainer} ${
+            noteCreation ? styles.active : ""
+          }`}
+        >
           <form action="">
             <div>
               {enableNoteEdit || noteCreation ? (

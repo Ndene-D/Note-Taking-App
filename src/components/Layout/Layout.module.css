@@ -388,6 +388,8 @@ hr {
     grid-column-start: 1;
     grid-row-end: 5;
     grid-column-end: 6;
+
+    position: relative;
   }
 
   .notesPanel.settings {
@@ -409,6 +411,10 @@ hr {
     grid-column-start: 1;
     grid-row-end: 5;
     grid-column-end: 6;
+  }
+
+  .notesContainer.active {
+    grid-row-start: 2;
   }
 
   .optionsPanel {

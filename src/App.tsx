@@ -377,15 +377,17 @@ function App() {
         handleSetTags={handleSetTags}
       ></Layout.PrimaryPanel>
       <>
-        {Object.keys(selectedNote).length !== 0 && mobileView ? (
+        {(Object.keys(selectedNote).length !== 0 || enableNoteCreation) &&
+        mobileView ? (
           <></>
         ) : (
           <Layout.SubPanel settings={navSelection == "Settings"}>
             <>
-              {navSelection == "All Notes" && !mobileView && (
+              {(navSelection == "All Notes" || navSelection == "Home") && (
                 <Button
-                  text="Create New Note"
+                  {...(!mobileView && { text: "Create New Note" })}
                   onClick={() => handleNoteCreation(true)}
+                  {...(mobileView && { icon: imageList.plus, mobileView })}
                 ></Button>
               )}
             </>

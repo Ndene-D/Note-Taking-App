@@ -11,6 +11,7 @@ interface ButtonModel extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   shrink?: boolean;
   secondary?: boolean;
   transparent?: boolean;
+  mobileView?: boolean;
   rotateIcon?: number;
 }
 function Button({
@@ -23,6 +24,7 @@ function Button({
   secondary,
   transparent,
   rotateIcon,
+  mobileView,
   ...buttonProps
 }: ButtonModel) {
   const { theme } = useTheme();
@@ -39,7 +41,9 @@ function Button({
         secondary ? styles.secondary : ""
       } ${theme == "light" ? styles.light : ""} ${
         shrink ? styles.shrink : ""
-      } ${transparent ? styles.transparent : ""}`}
+      } ${transparent ? styles.transparent : ""} ${
+        mobileView ? styles.mobile : ""
+      }`}
       {...(size && { style: { width: size } })}
       {...buttonProps}
     >
