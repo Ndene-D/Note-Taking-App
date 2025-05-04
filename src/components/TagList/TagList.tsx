@@ -1,4 +1,3 @@
-import React from "react";
 import { Tag } from "../../models/NoteModel";
 import styles from "./TagList.module.css";
 import { IconList } from "../../models/ThemeModel";

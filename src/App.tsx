@@ -69,9 +69,9 @@ function App() {
     const findTag = selectedTags.find((tag) => tag == id);
 
     if (!findTag) {
-      setSelectedTags((preval: string[]) => [...selectedTags, id]);
+      setSelectedTags((_preval: string[]) => [...selectedTags, id]);
     } else if (findTag) {
-      setSelectedTags((preval: string[]) =>
+      setSelectedTags((_preval: string[]) =>
         selectedTags.filter((tag) => tag !== id)
       );
     }
@@ -128,7 +128,7 @@ function App() {
       (tag) => !tagList.some((secTag) => tag.name === secTag.name)
     );
 
-    setTagList((preval: Tag[]) => [...tagList, ...getNewTags]);
+    setTagList((_preval: Tag[]) => [...tagList, ...getNewTags]);
 
     // console.log(tagList);
     console.log("New Tags: ", getNewTags);
@@ -164,7 +164,7 @@ function App() {
       archived: false,
     };
 
-    setNotes((preval: NoteModel[]) => [createNote, ...notes]);
+    setNotes((_preval: NoteModel[]) => [createNote, ...notes]);
 
     handleReset();
 
@@ -174,8 +174,8 @@ function App() {
   const handleUpdate = () => {
     const getTags = handleCheckTags();
 
-    setNotes((preval: NoteModel[]) =>
-      preval.map((note) => {
+    setNotes((_preval: NoteModel[]) =>
+      _preval.map((note) => {
         console.log(note.id, selectedNote.id);
         return note.id == selectedNote.id
           ? { ...note, title, tags: getTags, content, date: Date.now() }
@@ -205,23 +205,23 @@ function App() {
       }
     }
 
-    setSelectedTags((preval: string[]) =>
+    setSelectedTags((_preval: string[]) =>
       selectedTags.filter((id) => !removeTag.includes(id))
     );
 
-    setTagList((preval: Tag[]) =>
+    setTagList((_preval: Tag[]) =>
       tagList.filter((tag) => !removeTag.includes(tag.id))
     );
 
-    setNotes((preval: NoteModel[]) =>
+    setNotes((_preval: NoteModel[]) =>
       notes.filter((note) => note.id !== selectedNote.id)
     );
     setSelectedNote({} as SelectedModel);
   };
 
   const handleArchivedNote = () => {
-    setNotes((preval: NoteModel[]) =>
-      preval.map((note) => {
+    setNotes((_preval: NoteModel[]) =>
+      _preval.map((note) => {
         console.log(note.id, selectedNote.id);
         return note.id == selectedNote.id
           ? { ...note, archived: !note.archived }
@@ -424,7 +424,7 @@ function App() {
                 .every((value) => value === false) &&
                 navSelection == "Archived" && <h3>No Archived Notes</h3>}
 
-              {searchedItems.map((note, idx) => {
+              {searchedItems.map((note) => {
                 const findNote = notes.findIndex((n) => n.id == note.id);
 
                 const availableTags =
