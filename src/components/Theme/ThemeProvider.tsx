@@ -23,6 +23,8 @@ import Home from "../../assets/home.svg";
 import HomeDark from "../../assets/home-dark.svg";
 import Notes from "../../assets/notes.svg";
 import NotesDark from "../../assets/notes-dark.svg";
+import Plus from "../../assets/plus.svg";
+import PlusDark from "../../assets/plus-dark.svg";
 import RightArrow from "../../assets/right-arrow.svg";
 import RightArrowDark from "../../assets/right-arrow-dark.svg";
 import Search from "../../assets/search.svg";
@@ -114,6 +116,7 @@ function ThemeProvider({ children }: ThemeProviderModel) {
     font: theme == "light" ? FontDark : Font,
     home: theme == "light" ? HomeDark : Home,
     notes: theme == "light" ? NotesDark : Notes,
+    plus: theme == "light" ? PlusDark : Plus,
     rightArrow: theme == "light" ? RightArrowDark : RightArrow,
     search: theme == "light" ? SearchDark : Search,
     settings: theme == "light" ? SettingsDark : Settings,

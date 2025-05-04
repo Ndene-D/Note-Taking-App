@@ -88,12 +88,24 @@
   color: var(--text-color);
 }
 
+@media (max-width: 1024px) {
+  .button.mobile {
+    position: absolute;
+    width: 3.125em;
+    height: 3.125em;
+    border-radius: 100%;
+    bottom: 0;
+    right: 0;
+    margin-right: 1.5em !important;
+  }
+}
+
 @media (max-width: 768px) {
-  .icon {
+  .icon:not(.button.mobile) {
     margin: 0 !important;
   }
 
-  .icon img {
+  .icon img:not(.button.mobile) {
     margin: 0 !important;
   }
 }
